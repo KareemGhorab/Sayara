@@ -8,7 +8,7 @@ interface Props {
 //TODO fetch from API
 const list: ProductItem[] = [
 	{
-		title: 'Car Breaks',
+		title: 'Car Brakes',
 		src: '/category-breaks.jpg',
 		href: '/shop?category=brakes',
 	},
@@ -43,14 +43,16 @@ export default function Products({ className = '' }: Props) {
 	return (
 		<div
 			className={`
-                grid max-w-7xl gap-10
-                px-10
-                md:grid-cols-2 lg:grid-cols-3
+                grid w-full max-w-7xl grid-cols-1 
+                gap-3 px-10
+                sm:grid-cols-10
                 ${className}`}
 		>
-			{list.map((product) => (
-				<ProductCard key={product.title} item={product} />
-			))}
+			{list[0] && <ProductCard item={list[0]} className='sm:col-span-6' />}
+			{list[1] && <ProductCard item={list[1]} className='sm:col-span-4' />}
+			{list[2] && <ProductCard item={list[2]} className='sm:col-span-2' />}
+			{list[3] && <ProductCard item={list[3]} className='sm:col-span-5' />}
+			{list[4] && <ProductCard item={list[4]} className='sm:col-span-3' />}
 		</div>
 	)
 }

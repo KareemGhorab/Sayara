@@ -16,34 +16,36 @@ export default function ProductCard({
 			<Link
 				href={href}
 				className='
-                    group hover:text-primary-500'
+                    group relative'
 			>
-				<div className='flex--centered flex-col'>
-					<figure
+				<figure
+					className='
+                        w-full 
+                        overflow-hidden rounded'
+				>
+					<Image
+						src={src}
+						alt={title}
+						width={1000}
+						height={1000}
 						className='
-                            overflow-hidden rounded-xl'
-					>
-						<Image
-							src={src}
-							alt={title}
-							width={1000}
-							height={1000}
-							className='
-                                object-cover object-center
-                                group-hover:scale-110
-                                transition-transform duration-100
-                                w-96 h-80'
-						/>
-					</figure>
-					<div className='my-2'></div>
-					<p
-						className='
-                        text-2xl 
-                        font-bold'
-					>
-						{title}
-					</p>
-				</div>
+                            h-80 w-full
+                            object-cover object-center
+                            transition-transform
+                            duration-100 group-hover:scale-110
+                            sm:h-52 lg:h-72'
+					/>
+				</figure>
+				<figcaption
+					className='
+                            bg-black bg-opacity-50
+                            flex--centered
+                            absolute top-0 right-0 left-0 bottom-0
+                            font-semibold text-white text-2xl
+                            group-hover:text-primary-300'
+				>
+					{title}
+				</figcaption>
 			</Link>
 		</article>
 	)
