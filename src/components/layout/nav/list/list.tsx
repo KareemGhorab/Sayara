@@ -50,12 +50,12 @@ export default function List({ className = '' }: Props) {
 			<Button toggle={toggleMenu} className={`block md:hidden`} />
 			<ul
 				className={`
-                flex flex-col gap-3
-                md:flex md:flex-row md:items-center md:justify-center 
-                ${cn({
-									'block absolute': isMenuOpen,
-									'hidden ': !isMenuOpen,
-								})}`}
+                    flex flex-col gap-6
+                    md:flex md:flex-row md:items-center md:justify-center 
+                    ${cn({
+                                        'block absolute': isMenuOpen,
+                                        'hidden ': !isMenuOpen,
+                                    })}`}
 			>
 				{list.map((li) => (
 					<Li key={li.title} li={li} />

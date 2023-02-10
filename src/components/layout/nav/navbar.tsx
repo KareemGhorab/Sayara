@@ -11,18 +11,19 @@ export default function Navbar() {
 
 	return (
 		<div
-			className={`fixed z-50 
-            flex w-full justify-center
-            ${cn({
-							'bg-white text-black': windowScroll > navBgChangePoint,
-							'bg-transparent text-white': windowScroll <= navBgChangePoint,
-						})}`}
+			className={`
+                fixed z-50 
+                flex w-full justify-center
+                ${cn({
+									'bg-white text-black': windowScroll > navBgChangePoint,
+									'bg-transparent text-white': windowScroll <= navBgChangePoint,
+								})}`}
 		>
 			<nav
 				className={`
-                flex w-full
-                max-w-7xl items-center justify-between
-                gap-4 px-5 py-4 `}
+                    flex w-full
+                    max-w-7xl items-center justify-between
+                    gap-4 p-5`}
 			>
 				<Logo className='order-2 text-5xl md:order-1' />
 				<List className='order-1 md:order-2' />

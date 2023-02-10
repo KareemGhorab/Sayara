@@ -12,6 +12,9 @@ module.exports = {
 			fontFamily: {
 				sayara: ['var(--font-sayara)'],
 			},
+			fontSize: {
+				'10xl': '10rem',
+			},
 		},
 	},
 	plugins: [],
