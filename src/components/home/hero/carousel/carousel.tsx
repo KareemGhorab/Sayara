@@ -22,6 +22,7 @@ export default function HeroCarousel({ className = '' }: Props) {
 			showIndicators={false}
 			showStatus={false}
 			showThumbs={false}
+			showArrows={false}
 			className={`${className}`}
 		>
 			{list.map((ci) => (

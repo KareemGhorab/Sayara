@@ -9,6 +9,7 @@ const list: (ListItem | ListItemExpandable)[] = [
 	{ title: 'Home', href: '/' },
 	{
 		title: 'Categories',
+        //TODO Fetch from API
 		children: [
 			{ title: 'Brakes', href: '/shop?category=brakes' },
 			{
